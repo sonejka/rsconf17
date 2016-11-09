@@ -1,31 +1,181 @@
 // bower:scss
 // endbower
+@import "../../node_modules/normalize.scss/normalize.scss";
 
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+html {
+  font-size: 1.25em;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+body {
+  background-color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #313131;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  color: #fed800;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 6.854em;
+}
+
+h2 {
+  font-size: 4.236em;
+}
+
+h3 {
+  font-size: 2.618em;
+}
+
+h4 {
+  font-size: 1.618em;
+}
+
+small, .font_small {
+  font-size: 0.618em;
+}
+
+a {
+  color: #fed800;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.b-header {
+  background: #fed800;
+  background: linear-gradient(to right, #fee100, #fbbe00);
+  text-align: center;
+
+  &-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    padding: 50px 0;
+    text-align: right;
+  }
+
+  &__title1 {
+    font-size: 95.5px;
+    line-height: 70px;
+    font-weight: 600;
+    font-variant: small-caps;
+  }
+
+  &__title2 {
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 130px;
+    text-transform: uppercase;
+    letter-spacing: -6px;
+  }
+
+  &__title3 {
+    margin-top: 10px;
+    font-size: 50px;
   }
 }
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.b-header:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 100px;
+  background: url("../images/logo-winter.png") no-repeat 0 0;
+  background-size: contain;
+  height: 400px;
+  width: 400px;
+  opacity: 0.1;
+  transform: rotate(20deg);
+}
+
+/* ==========================================================================
+   Section
+   ========================================================================== */
+
+.b-section {
+  overflow: hidden;
+  padding: 0 0 2em;
+  &--dark-grey {
+    background: #313131;
+    color: #fff;
+  }
+  &--grey {
+    background: #232323;
+    color: #fff;
+  }
+}
+
+/* ==========================================================================
+   Article
+   ========================================================================== */
+
+.b-article {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* ==========================================================================
+   Speaker
+   ========================================================================== */
+
+.b-speaker {
+
+  padding: 2rem 0;
+  overflow: hidden;
+  font-size: 1em;
+  line-height: 1.2;
+
+  p {
+    margin: 0 0 .5rem;
+  }
+
+  &__photo {
+    width: 300px;
+    height: 300px;
+
+    &--left {
+      float: left;
+      margin: 0 1rem 0 0;
+    }
+
+    &--right {
+      float: right;
+      margin: 0 0 0 1rem;
+    }
+  }
+  &__name {
+    font-size: 1.5em;
+    font-variant: small-caps;
+  }
+  &__link {
+    text-decoration: none;
+    font-variant: normal;
+  }
+  &__country {
+    font-size: .75em;
+    color: #ccc;
+  }
+  &__description {
+  }
+
 }
